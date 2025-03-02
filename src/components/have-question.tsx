@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 function HaveAquestion() {
   return (
-    <div className="secGap relative mx-auto w-full bg-[url(/images/callbg.png)] text-white">
+    <div className="secGap relative mx-auto w-full bg-cover bg-center bg-no-repeat bg-[url('/images/callbg.png')] text-white">
       <div className="container relative mx-auto px-4 py-8 sm:py-10 lg:py-12">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center justify-items-center gap-12 lg:grid-cols-2 lg:justify-items-start">

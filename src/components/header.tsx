@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { BiSolidBadgeCheck } from "react-icons/bi";
 import { BsCart3, BsHeadset } from "react-icons/bs";
 import {
   FaArrowRight,
@@ -7,9 +9,6 @@ import {
   FaPhoneAlt,
   FaTruck,
 } from "react-icons/fa";
-import { BiSolidBadgeCheck } from "react-icons/bi";
-import { motion, AnimatePresence } from "framer-motion";
-import React from "react";
 import { Link } from "react-scroll";
 
 const slides = [
@@ -125,7 +124,7 @@ export function Header() {
           <div className="color-green">
             <div className="relative mx-auto flex min-h-[52px] sm:min-h-[60px] md:min-h-[70px] max-w-7xl items-center justify-end px-4 py-3 text-white lg:py-1">
               <a
-                className="absolute right-1/2 translate-x-1/2 p-1 text-2xl focus:ring"
+                className="absolute right-1/2 translate-x-1/2 p-1 text-2xl"
                 href="#"
               >
                 <h1 className="sr-only">Eco Health Funnel</h1>

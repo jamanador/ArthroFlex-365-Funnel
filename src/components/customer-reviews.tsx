@@ -1,4 +1,3 @@
-import { BiSolidDislike, BiSolidLike } from "react-icons/bi";
 import { IoIosCheckmark, IoIosCheckmarkCircle, IoMdStar } from "react-icons/io";
 
 const reviews = [
@@ -98,10 +97,10 @@ export function CustomerReviews() {
                 {/* <p className="text-xs sm:text-sm">
                 Review left on: Nitric Oxide Organic Beets Single-Serve Packs
               </p> */}
-                <div className="flex items-center gap-x-2 text-xs sm:text-sm">
+                {/* <div className="flex items-center gap-x-2 text-xs sm:text-sm">
                   Was this review helpful? <BiSolidLike /> 0 <BiSolidDislike />{" "}
                   0
-                </div>
+                </div> */}
               </div>
             </li>
           ),

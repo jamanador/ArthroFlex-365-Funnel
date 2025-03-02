@@ -1,5 +1,7 @@
-import * as Accordion from "@radix-ui/react-accordion";
-import { IoChevronDown } from "react-icons/io5";
+import * as Accordion from '@radix-ui/react-accordion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { IoChevronDown } from 'react-icons/io5';
 
 const faqs = [
   {
@@ -50,9 +52,22 @@ const faqs = [
 ] as const;
 
 export function Faq() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const faqVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (custom:number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: custom * 0.2, // Stagger each item by 0.2 seconds
+      },
+    }),
+  };
   return (
-    <section className=" mb-8 md:mb-12 xl:mb-16  mt-7 p-fit">
-      <h2 className="text-balance pb-10 text-center text-2xl font-black md:text-[39px] lg:text-4xl text-black ">
+    <section ref={ref} className="mb-8 md:mb-12 xl:mb-16 mt-7 p-fit">
+      <h2 className="text-balance pb-10 text-center text-2xl font-black md:text-[39px] lg:text-4xl text-black">
         Frequently Asked Questions
       </h2>
       <Accordion.Root
@@ -62,22 +77,25 @@ export function Faq() {
         className="mx-auto max-w-2xl divide-y divide-neutral-dark/25 border-b border-t border-neutral-dark/25"
       >
         {faqs.map(({ question, answer }, index) => (
-          <Accordion.Item
+          <motion.div
             key={`faq${index}`}
-            value={`faq${index}`}
-            className="overflow-hidden"
+            custom={index}
+            variants={faqVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
           >
-            <Accordion.Trigger className="group flex w-full flex-1 items-center justify-between px-2 py-5 text-start leading-normal outline-none">
-              <span>{question}</span>
-              <IoChevronDown className="size-5 group-data-[state=open]:rotate-180" />
-            </Accordion.Trigger>
-            <Accordion.Content className="overflow-hidden px-2 pb-6">
-              {answer}
-            </Accordion.Content>
-          </Accordion.Item>
+            <Accordion.Item value={`faq${index}`} className="overflow-hidden">
+              <Accordion.Trigger className="group flex w-full flex-1 items-center justify-between px-2 py-5 text-start leading-normal outline-none">
+                <span>{question}</span>
+                <IoChevronDown className="size-5 group-data-[state=open]:rotate-180" />
+              </Accordion.Trigger>
+              <Accordion.Content className="overflow-hidden px-2 pb-6">
+                {answer}
+              </Accordion.Content>
+            </Accordion.Item>
+          </motion.div>
         ))}
       </Accordion.Root>
-    
     </section>
   );
 }

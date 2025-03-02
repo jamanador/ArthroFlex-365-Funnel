@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll';
 import { Banner } from "./components/banner";
 import { CustomerReviews } from "./components/customer-reviews";
 import EcoHelth from "./components/Eco-helth";
@@ -15,7 +16,6 @@ import { TheProblem } from "./components/the-problem";
 import { TheSolution } from "./components/the-solution";
 import { WhyItWorks } from "./components/why-it-works";
 import { WhyUrinaryFormula } from "./components/why-urinary-formula";
-import { Element } from 'react-scroll';
 
 export function App() {
   return (

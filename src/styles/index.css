@@ -59,6 +59,9 @@
   .secGap {
     @apply my-12 md:my-16 xl:my-20;
   }
+  .secGap_one {
+    @apply mt-14;
+  }
   .color-green {
     @apply bg-[#214068];
   }

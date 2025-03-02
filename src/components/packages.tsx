@@ -40,7 +40,7 @@ export function Packages() {
       fakePrice: 149.85,
       topColor: "bg-[#C0C0C0]",
       textColor: "text-white",
-      image: "/images/package3.png",
+      image: "/images/buy2get1.png",
     },
     "3plus2": {
       title: "Buy 3, Get 2 FREE!",
@@ -57,7 +57,7 @@ export function Packages() {
       fakePrice: 249.75,
       topColor: "bg-[#e0c62f]",
       textColor: "text-white",
-      image: "/images/package2.png",
+      image: "/images/buy3get2.png",
     },
     "1bottle": {
       title: "1 Bottle",
@@ -74,7 +74,7 @@ export function Packages() {
       fakePrice: 249.75,
       topColor: "bg-[#CD7F32]",
       textColor: "text-white",
-      image: "/images/package1.png",
+      image: "/images/buy1.png",
     },
   };
 
@@ -133,7 +133,7 @@ export function Packages() {
                 <img
                   src={pkg?.image}
                   alt=""
-                  className="mx-auto mb-4 h-[250px] w-ful"
+                  className="mx-auto mb-4 w-ful"
                 />
                 <div className="mb-6 text-center">
                   <div className="text-5xl font-bold text-gray-900">

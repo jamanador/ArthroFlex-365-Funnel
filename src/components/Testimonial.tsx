@@ -1,45 +1,47 @@
-import { twMerge } from "tailwind-merge";
 import { Star } from "lucide-react";
 import { Link } from "react-scroll";
+import { twMerge } from "tailwind-merge";
 
 export function TestimonialSection() {
   return (
     <div className="secGap mx-auto max-w-7xl lg:px-0">
       <div
         className={twMerge(
-          "w-full bg-[url('/images/Bgherooo2.png')] bg-cover bg-center bg-no-repeat object-fill px-2 py-12 md:pt-12 text-center shadow-lg md:bg-[url('/images/Bgherooo1.png')] lg:px-4 lg:pt-14 xl:px-2 xl:pt-12",
+          "w-full bg-[url('/images/Bgherooo2.png')] bg-cover bg-center bg-no-repeat object-fill px-2 py-12 md:pt-12 text-center shadow-lg md:bg-[url('/images/Bgherooo1.png')] lg:px-4 lg:pt-6 xl:px-2 xl:pt-5",
         )}
       >
         {/* Content (Stacked above the overlay) */}
-        <div className="grid md:grid-cols-12 lg:gap-3">
-          {/* First Div: 2fr */}
+        <div className="grid md:grid-cols-12 lg:gap-3 items-center">
+          {/* First Div: Spacer for Centering */}
           <div className="sm:col-span-1 lg:col-span-3"></div>
 
-          {/* Second Div: 4fr */}
-          <div className="col-span-7 mx-auto flex max-w-3xl flex-col items-center gap-4 lg:col-span-6 xl:gap-7">
-            {/* Paragraph */}
-            <div className="grid justify-items-center">
-              <div className="mb-3 flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-5 w-5 fill-yellow-400 text-yellow-400 md:h-6 md:w-6"
-                  />
-                ))}
-              </div>
-              <p className="text-[14px] sm:text-[15px] max-w-[60ch] md:max-w-full font-semibold italic leading-relaxed  md:text-[15px] text-black lg:text-[16px] lg:font-bold xl:text-[18px]">
-                "After using Arthro Flex 365, my joints feel more exible and pain-free. I can move with ease and comfort, allowing me to enjoy my favorite activities again -" —{" "}
-                <span className="font-normal not-italic">Sarah T.</span>
-              </p>
+          {/* Second Div: Centered Content */}
+          <div className="col-span-7 mx-auto flex max-w-3xl flex-col items-center gap-4 text-center lg:col-span-6 xl:gap-7">
+            {/* Star Rating */}
+            <div className="flex items-center justify-center gap-1 mb-3">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="h-5 w-5 fill-yellow-400 text-yellow-400 md:h-6 md:w-6"
+                />
+              ))}
             </div>
-            {/* Button */}
-            <div className="relative rounded-xl border border-dashed border-brand-maroon py-1 text-[12px] font-bold text-white px-4 sm:text-[13px] md:px-2 lg:w-[350px] lg:px-3 lg:text-[15px]">
+
+            {/* Testimonial Text */}
+            <p className="text-[14px] sm:text-[15px] max-w-[60ch] md:max-w-full font-semibold italic leading-relaxed text-black lg:text-[16px] lg:font-bold xl:text-[18px]">
+              "After using Arthro Flex 365, my joints feel more <b>flexible</b> and pain-free. 
+              I can move with ease and comfort, allowing me to enjoy my favorite activities again -" 
+              <span className="font-normal not-italic"> Sarah T.</span>
+            </p>
+
+            {/* Selling Badge (Now Centered) */}
+            <div className="relative flex items-center justify-center rounded-xl border border-dashed border-brand-maroon py-1 px-4 text-[12px] font-bold text-white sm:text-[13px] md:px-2 lg:w-[350px] lg:px-3 lg:text-[15px]">
               Selling fast, HURRY!
               <span className="text-maroon"> 43 sold in last hour!</span>
-              <span className="absolute -right-[0.5em] -top-[0.75em] text-3xl">
-                🔥
-              </span>
+              <span className="absolute -right-[10px] -top-[10px] text-3xl">🔥</span>
             </div>
+
+            {/* Add to Cart Button (Now Fully Aligned) */}
             <Link
               to="packages"
               smooth={true}
@@ -61,9 +63,13 @@ export function TestimonialSection() {
             </Link>
           </div>
 
-          {/* Third Div: 4fr */}
-          <div className="hidden md:col-span-4 md:grid lg:col-span-3 xl:w-[300px]">
-            <img src="/images/testimonialtwo.png" alt="Product Image" />
+          {/* Third Div: Bigger Bottle Image (No Color Change, Just Size & Effect) */}
+          <div className="hidden md:col-span-4 md:flex justify-center lg:col-span-3 xl:w-[320px]">
+            <img 
+              src="/images/testimonialtwo.png" 
+              alt="Product Image"
+              className="w-[120%] max-w-[380px] transform transition-all duration-300 ease-in-out hover:scale-105"
+            />
           </div>
         </div>
       </div>

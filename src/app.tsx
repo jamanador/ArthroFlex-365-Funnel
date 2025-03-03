@@ -16,7 +16,7 @@ import { TheProblem } from "./components/the-problem";
 import { TheSolution } from "./components/the-solution";
 import { WhyItWorks } from "./components/why-it-works";
 import { WhyUrinaryFormula } from "./components/why-urinary-formula";
-
+import "./styles/index.css";
 export function App() {
   return (
     <div className="font-montserrat">

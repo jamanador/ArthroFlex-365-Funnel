@@ -57,7 +57,7 @@ export function Banner() {
             alt="banner image"
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
           />
         </div>
         <picture className="mt-4 md:mt-0 left-[35%] lg:left-[45%] xl:left-[45%] top-[44%] xl:top-[42%] col-span-full  max-w-[16rem] lg:absolute lg:max-w-[6%] xl:max-w-20 md:block sm:block xl:block lg:hidden">

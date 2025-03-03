@@ -24,7 +24,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="grid justify-items-center gap-y-8 ">
+      <div className="grid justify-items-center justify-center text-center gap-y-8 ">
         <div className="space-y-2 pt-14">
           <h3 className="text-3xl font-bold text-[#0d3c15e9]">Contact</h3>
           <div className="flex items-center gap-x-3 text-sm text-[#0d3c15e9]">
@@ -40,7 +40,7 @@ export function Footer() {
           *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Caution: If you are pregnant, nursing, or taking medications, consult your physician before use. Keep out of reach of children
         </p>
         <span className="text-[#a5a5a5] mb-7 md:mb-1 italic">
-          © {new Date().getFullYear()} ECO HEALTH. All Rights Reserved
+          © 2025 ECO HEALTH. All Rights Reserved
 
         </span>
       </div>

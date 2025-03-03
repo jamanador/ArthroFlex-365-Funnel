@@ -18,7 +18,7 @@ export function TheSolution() {
       <div className="grid gap-6 md:gap-8 lg:grid-cols-2 lg:items-center mt-11">
         <div ref={ref}>
           <motion.img
-            className="mx-auto rounded-lg lg:h-[84%] lg:w-[95%]"
+            className="mx-auto rounded-lg w-full lg:h-[84%] lg:w-[95%]"
             src="/images/solution-artho.png"
             alt="solution section image"
             initial={{ x: '-100%', opacity: 0 }}

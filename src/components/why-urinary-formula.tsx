@@ -20,7 +20,7 @@ export function WhyUrinaryFormula() {
             <div className="absolute -bottom-24 -right-24 h-[400px] w-[400px] rounded-full bg-orange-100/40 blur-3xl"></div>
             <div className="m relative flex items-center justify-center">
               <img
-                src="/images/whyartholeft.png"
+                src="/images/whyartholefttwo.png"
                 alt="Urinary Formula Product"
                 className="w-[300px] md:w-auto"
               />

@@ -136,7 +136,7 @@ export function Packages() {
                   className="mx-auto mb-4 w-ful"
                 />
                 <div className="mb-6 text-center">
-                  <div className="text-5xl font-bold text-gray-900">
+                  <div className="text-5xl font-bold text-gray-900 ">
                     $
                     {isSubscribe
                       ? pkg.perBottleSubscribe

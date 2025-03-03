@@ -1,20 +1,35 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { AddToCartButton } from "./add-to-cart-button";
 import { CartBadge } from "./cart-badge";
 import { SalesBadge } from "./sales-badge";
 
 export function Satisfaction() {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="bg-[#EEF7FF]">
       <section className="mx-auto my-0 grid max-w-7xl place-items-center justify-items-center p-5 lg:grid-cols-2 lg:gap-12 lg:p-8 xl:p-5">
         {/* Image Section */}
-        <div className=" relative order-first mx-auto flex  max-w-[370px] items-center justify-center md:order-first md:max-w-[500px] lg:order-last ">
+        {/* <div className=" relative order-first mx-auto flex  max-w-[370px] items-center justify-center md:order-first md:max-w-[500px] lg:order-last ">
           <img
             className="h-full w-full  object-cover"
             src="/images/heroartho.png"
             alt="satisfaction image"
           />
+        </div> */}
+        <div ref={ref} className="relative order-first mx-auto flex  max-w-[370px] items-center justify-center md:order-first md:max-w-[500px] lg:order-last ">
+          <motion.img
+            className="h-full w-full  object-cover"
+            src="/images/heroartho.png"
+            alt="solution section image"
+            initial={{ x: '100%', opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ duration: 1.5 }}
+          />
         </div>
-
         {/* Text Section */}
         <div className="w-full py-6 text-center md:py-8 lg:py-12 lg:text-start">
           <h3 className="text-maroon text-xl font-bold md:text-2xl">
@@ -36,6 +51,7 @@ export function Satisfaction() {
                 src="/icons/icon-90-day.png"
                 alt="90 day icon"
               />
+             
             </div>
           </div>
         </div>

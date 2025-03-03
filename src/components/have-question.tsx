@@ -7,7 +7,7 @@ function HaveAquestion() {
     <div className="secGap relative mx-auto w-full bg-cover bg-center bg-no-repeat bg-[url('/images/callbg.png')] text-white">
       <div className="container relative mx-auto px-4 py-8 sm:py-10 lg:py-12">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center justify-items-center gap-12 lg:grid-cols-2 lg:justify-items-start">
+          <div className="grid items-center justify-items-center gap-12 md:grid-cols-2 md:justify-items-start">
             {/* Left section with text */}
             <div className="order-2 space-y-6 text-left lg:order-1">
               <div className="space-y-2">

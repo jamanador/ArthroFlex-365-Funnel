@@ -15,7 +15,7 @@ import { TestimonialSection } from "./components/Testimonial";
 import { TheProblem } from "./components/the-problem";
 import { TheSolution } from "./components/the-solution";
 import { WhyItWorks } from "./components/why-it-works";
-import { WhyUrinaryFormula } from "./components/why-urinary-formula";
+import { WhyArthoFlex } from "./components/whyarthoflex";
 import "./styles/index.css";
 export function App() {
   return (
@@ -28,7 +28,7 @@ export function App() {
       </div>
       <TestimonialSection />
       <EcoHelth />
-      <WhyUrinaryFormula />
+      <WhyArthoFlex/>
       <EcoHelth />
       <WhyItWorks />
       <Ingredients/>

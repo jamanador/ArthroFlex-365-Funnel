@@ -176,10 +176,10 @@ export function Header() {
               >
                 <img
                   className="h-[52px] w-auto"
-                  src="/images/hero-2.png"
+                  src="/images/whyartholefttwo.png"
                   alt="SNAP"
                 />
-                <div className="text-sm font-semibold">
+                <div className="text-xs font-semibold">
                   +Free Shipping on
                   <br /> orders over{" "}
                   <span className="text-brand-lime">$50</span>
@@ -219,7 +219,7 @@ export function Header() {
                   },
                 }}
               >
-                <span className="text-[18px] font-bold">Add To Cart</span>
+                <span className="text-[13px] font-bold">Add To Cart</span>
               </motion.button>
               </Link>
             </div>

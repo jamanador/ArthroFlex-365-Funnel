@@ -1,13 +1,19 @@
+import { motion, useInView } from 'framer-motion';
 import { Star } from "lucide-react";
+import { useRef } from 'react';
 import { Link } from "react-scroll";
 import { twMerge } from "tailwind-merge";
 
 export function TestimonialSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="secGap mx-auto max-w-7xl lg:px-0">
       <div
+        ref={ref}
         className={twMerge(
-          "w-full bg-[url('/images/Bgherooo2.png')] bg-cover bg-center bg-no-repeat object-fill px-2 py-12 md:pt-12 text-center shadow-lg md:bg-[url('/images/Bgherooo1.png')] lg:px-4 lg:pt-6 xl:px-2 xl:pt-5",
+          "w-full bg-[url('/images/Bgherooo2.png')] bg-cover bg-center bg-no-repeat object-fill px-2 py-12 md:pt-12 text-center shadow-lg md:bg-[url('/images/Bgherooo1.png')] lg:px-4 lg:pt-6 xl:px-2 xl:pt-5 relative overflow-hidden",
         )}
       >
         {/* Content (Stacked above the overlay) */}
@@ -18,19 +24,19 @@ export function TestimonialSection() {
           {/* Second Div: Centered Content */}
           <div className="col-span-7 mx-auto flex max-w-3xl flex-col items-center gap-4 text-center lg:col-span-6 xl:gap-7">
             {/* Star Rating */}
-            <div className="flex items-center justify-center gap-1 mb-3">
+            <div className="flex items-center justify-center gap-1 mb-0">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="h-5 w-5 fill-yellow-400 text-yellow-400 md:h-6 md:w-6"
+                  className="h-7 w-7 fill-yellow-400 text-yellow-400 md:h-8 md:w-8"
                 />
               ))}
             </div>
 
             {/* Testimonial Text */}
             <p className="text-[14px] sm:text-[15px] max-w-[60ch] md:max-w-full font-semibold italic leading-relaxed text-black lg:text-[16px] lg:font-bold xl:text-[18px]">
-              "After using Arthro Flex 365, my joints feel more <b>flexible</b> and pain-free. 
-              I can move with ease and comfort, allowing me to enjoy my favorite activities again -" 
+              "After using Arthro Flex 365, my joints feel more <b>flexible</b> and pain-free.
+              I can move with ease and comfort, allowing me to enjoy my favorite activities again -"
               <span className="font-normal not-italic"> Sarah T.</span>
             </p>
 
@@ -48,7 +54,7 @@ export function TestimonialSection() {
               duration={500}
               offset={-50}
               className="relative z-10 flex h-12 w-[16em] transform cursor-pointer items-center
-               justify-center rounded-lg border border-none border-brand-maroon bg-brand-maroon px-4 text-xl 
+               justify-center rounded-lg border border-none border-brand-maroon bg-brand-maroon px-4 text-xl
                font-bold text-white transition-all duration-100 ease-in-out hover:scale-100 active:scale-[98%]"
             >
               Add To Cart
@@ -63,12 +69,15 @@ export function TestimonialSection() {
             </Link>
           </div>
 
-          {/* Third Div: Bigger Bottle Image (No Color Change, Just Size & Effect) */}
+          {/* Third Div: Bigger Bottle Image (Animated from Below) */}
           <div className="hidden md:col-span-4 md:flex justify-center lg:col-span-3 xl:w-[320px]">
-            <img 
-              src="/images/testimonialtwo.png" 
+            <motion.img
+              src="/images/testimonialtwo.png"
               alt="Product Image"
               className="w-[120%] max-w-[380px] transform transition-all duration-300 ease-in-out hover:scale-105"
+              initial={{ y: '100%', opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
             />
           </div>
         </div>

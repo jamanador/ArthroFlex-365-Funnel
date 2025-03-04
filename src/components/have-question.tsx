@@ -13,7 +13,7 @@ function HaveAquestion() {
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center justify-items-center gap-12 md:grid-cols-2 md:justify-items-start">
             {/* Image section */}
-            <div className="order-1 md:order-2 relative mx-auto w-[70%] md:w-full md:max-w-md lg:max-w-lg">
+            <div className="order-1 md:order-2 relative mx-auto w-[83%] md:w-full md:max-w-md lg:max-w-lg">
               <div className="relative aspect-square">
                 <img
                   src="/images/call.jpg"

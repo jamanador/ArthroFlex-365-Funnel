@@ -1,21 +1,21 @@
 import { Element } from 'react-scroll';
-import { Banner } from "./components/banner";
+import { Banner } from './components/banner';
 import { CustomerReviews } from "./components/customer-reviews";
 import EcoHelth from "./components/Eco-helth";
 import { Faq } from "./components/faq";
 import { Footer } from "./components/footer";
-import HaveAquestion from "./components/have-question";
+import HaveAquestion from './components/have-question';
 import { Header } from "./components/header";
 import Ingredients from "./components/ingredients";
 import { Packages } from "./components/packages";
-import { Satisfaction } from "./components/satisfaction";
+import { Satisfaction } from './components/satisfaction';
 import SellingFast from "./components/sellingFast";
 import SubSection from "./components/SubSection";
-import { TestimonialSection } from "./components/Testimonial";
+import { TestimonialSection } from './components/Testimonial';
 import { TheProblem } from "./components/the-problem";
-import { TheSolution } from "./components/the-solution";
+import { TheSolution } from './components/the-solution';
 import { WhyItWorks } from "./components/why-it-works";
-import { WhyArthoFlex } from "./components/whyarthoflex";
+import { WhyArthoFlex } from './components/whyarthoflex';
 import "./styles/index.css";
 export function App() {
   return (

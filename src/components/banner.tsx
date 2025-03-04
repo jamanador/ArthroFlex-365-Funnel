@@ -32,7 +32,7 @@ export function Banner() {
           ArthroFlex 365: The Ultimate Joint Repair Solution –{' '}
           <span className="text-[#3190FF]">Move Pain-Free, Stay Active!</span>
         </motion.p>
-        <p className="text-[15px] md:text-base xl:text-md col-span-full lg:max-w-[55ch] xl:max-w-[63ch] text-pretty font-semibold leading-relaxed lg:col-span-1 lg:row-start-3 text-center lg:text-start">
+        <p className="text-[15px] md:text-base xl:text-md col-span-full lg:max-w-[55ch] xl:max-w-[63ch] text-pretty font-semibold leading-relaxed lg:col-span-1 lg:row-start-3 text-center lg:text-start ">
           Arthro Flex 365 is formulated with a synergistic blend of joint-supporting nutrients, combining the latest scientific research with natural anti-inflammatory botanicals to promote optimal joint health and mobility.
         </p>
         <ul className="col-span-full col-start-1 space-y-2 pb-5 text-start font-semibold md:text-xl lg:col-span-1 lg:row-start-4">
@@ -53,7 +53,7 @@ export function Banner() {
         <OffersBadge className="col-span-full row-start-5 md:row-start-5 lg:col-span-1 lg:col-start-1 lg:row-start-8 my-6 md:my-0" />
         <div className="right-0 top-1/2 row-start-3 max-w-[40rem] md:max-w-[42rem] md:row-start-3 lg:col-start-2 lg:row-start-1 lg:absolute lg:row-span-8 lg:w-[min(45vw,_40rem)] lg:max-w-none lg:-translate-y-1/2">
           <motion.img
-            className="object-center object-cover sm:p-5 md:p-15 lg:p-10"
+            className="object-center object-cover p-5 md:p-15 lg:p-10"
             src="/images/heroartho.png"
             alt="banner image"
             initial={{ x: '100%', opacity: 0 }}

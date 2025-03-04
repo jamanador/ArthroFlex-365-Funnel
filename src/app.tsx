@@ -1,4 +1,5 @@
 import { Element } from 'react-scroll';
+import BackToTopButton from './components/backToTopButton';
 import { Banner } from './components/banner';
 import { CustomerReviews } from "./components/customer-reviews";
 import EcoHelth from "./components/Eco-helth";
@@ -39,6 +40,7 @@ export function App() {
       <SubSection/>
       <CustomerReviews />
       <HaveAquestion />
+      <BackToTopButton/>
       <Footer />
     </div>
   );

@@ -10,7 +10,7 @@ import { SalesBadge } from "./sales-badge";
 export function Banner() {
   return (
     <section className="full-width grid-containerxl bg-[#EEF7FF] overflow-hidden">
-      <div className="lg:grid-cols-2 relative grid items-center justify-center justify-items-center gap-y-0 py-14 pt-10 text-center md:gap-x-10 md:gap-y-5 md:text-start xl:grid-cols-[75%_1fr] lg:justify-items-start mx-0 lg:mx-3 xl:mx-0">
+      <div className="lg:grid-cols-1 relative grid items-center justify-center justify-items-center gap-y-0 py-14 pt-10 text-center md:gap-x-10 md:gap-y-5 md:text-start xl:grid-cols-[75%_1fr] lg:justify-items-start mx-0 lg:mx-3 xl:mx-0">
         <div className="mb-6 md:my-0 flex flex-wrap items-center justify-center gap-2 sm:gap-x-3 rounded-full border bg-white px-3 sm:px-4 py-2 text-xs font-semibold md:font-bold shadow-lg md:py-1 sm:text-base">
           <span className="flex items-center">
             {Array.from({ length: 5 }).map((_, index) => (
@@ -35,6 +35,7 @@ export function Banner() {
         <p className="text-[15px] md:text-base xl:text-md col-span-full lg:max-w-[55ch] xl:max-w-[63ch] text-pretty font-semibold leading-relaxed lg:col-span-1 lg:row-start-3 text-center lg:text-start ">
           Arthro Flex 365 is formulated with a synergistic blend of joint-supporting nutrients, combining the latest scientific research with natural anti-inflammatory botanicals to promote optimal joint health and mobility.
         </p>
+
         <ul className="col-span-full col-start-1 space-y-2 pb-5 text-start font-semibold md:text-xl lg:col-span-1 lg:row-start-4">
           {config.bannerOfferings.map((offering, index) => (
             <li className="flex items-start gap-x-2" key={`offering${index}`}>
